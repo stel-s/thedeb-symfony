@@ -1,0 +1,43 @@
+question:
+    path:     /
+    defaults: { _controller: "StelQuestionBundle:Question:index" }
+
+question_show:
+    path:     /{id}/show
+    defaults: { _controller: "StelQuestionBundle:Question:show" }
+
+question_new:
+    path:     /new
+    defaults: { _controller: "StelQuestionBundle:Question:new" }
+
+question_create:
+    path:     /create
+    defaults: { _controller: "StelQuestionBundle:Question:create" }
+    requirements: { _method: post }
+
+question_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "StelQuestionBundle:Question:edit" }
+
+question_update:
+    path:     /{id}/update
+    defaults: { _controller: "StelQuestionBundle:Question:update" }
+    requirements: { _method: post|put }
+
+question_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "StelQuestionBundle:Question:delete" }
+    requirements: { _method: post|delete }
+question_vote_for:
+    path:     /{id}/votefor
+    defaults: { _controller: "StelQuestionBundle:Question:vote_for" }
+question_vote_against:
+    path:     /{id}/voteagainst
+    defaults: { _controller: "StelQuestionBundle:Question:vote_against" }   
+question_reason_against:
+    path:     /{id}/reasonagainst
+    defaults: { _controller: "StelQuestionBundle:Question:reason_against" }    
+    
+
+   
+

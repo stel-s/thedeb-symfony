@@ -1,0 +1,16 @@
+stel_question_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: StelQuestionBundle:Default:index }
+fos_comment_api:
+    type: rest
+    resource: "@FOSCommentBundle/Resources/config/routing.yml"
+    prefix: /api
+    defaults: { _format: html }
+StelQuestionBundle_question:
+        resource: "@StelQuestionBundle/Resources/config/routing/question.yml"
+        prefix:   /question
+question_getall:
+    path:     /
+    defaults: { _controller: "StelQuestionBundle:Default:getAll" }
+
+    

@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Question</h1>
+    
+<div class="container">
+
+    
+
+{%for question in questions %}
+
+    <div class="container">
+<div class="question-header panel clearfix" style="background-color: #333;">
+    <div class="question-q col-sm-2 hidden-xs true-blue-color">
+              <span class="pull-right">Q:</span>
+          </div>
+    <div class="question-text lead col-sm-10 col-xs-12">
+             <a href="{{ path('question_show', { 'id': question.id }) }}" data-bindattr-758="758" data-ember-action="759">{{question.title}}</a>
+              <div class="question-feed-sub-text">
+              <span></span>
+              ·
+              question created by <span id="ember1668" class="ember-view timeago" title="2014-06-25T02:07:52.707Z">2 days ago</span>
+              </div>
+          </div>
+</div>
+</div>
+    
+    
+{%endfor%}
+     <a href="{{ path('question_new') }}">
+         <button>Create a new entry</button>
+            </a>
+    {%endblock%}
